@@ -1,0 +1,12 @@
+sources:
+  - name: erp
+    description: Sistema de vendas da empresa Adventure Works.
+    schema: raw_adventure_works
+    database: fea24_11
+    tables:
+      - name: product
+        columns:
+          - name: productid
+            data_tests:
+              - unique
+              - not_null
