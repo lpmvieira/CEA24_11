@@ -10,3 +10,25 @@ sources:
             data_tests:
               - unique
               - not_null
+              
+      - name: address
+        columns:
+          - name: addressid
+            data_tests:
+              - unique
+              - not_null
+
+      - name: stateprovince
+        columns:
+          - name: stateprovinceid
+            data_tests:
+              - unique
+              - not_null        
+
+
+      - name: countryregion
+        columns:
+          - name: countryregioncode
+            data_tests:
+              - unique
+              - not_null        

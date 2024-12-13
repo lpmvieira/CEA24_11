@@ -4,7 +4,7 @@ with
         from {{ source('erp', 'product') }}
     )
 
-    , renomeado as (
+    , renomed as (
         select 
             cast(productid as int) as pk_product
             , cast(name as varchar) as name_product  
@@ -15,4 +15,4 @@ with
     )
 
 select *
-from renomeado
+from renomed
