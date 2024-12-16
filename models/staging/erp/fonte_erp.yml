@@ -5,15 +5,33 @@ sources:
     database: fea24_11
     tables:
       - name: product
+        description: Fonte das informações sobre os produtos.
         columns:
           - name: productid
             data_tests:
               - unique
               - not_null
-              
+
+      - name: productsubcategory
+        columns:
+          - name: productsubcategoryid
+            description: Fonte das informações sobre as subcategorias dos produtos.
+            data_tests:
+              - unique
+              - not_null
+
+      - name: productcategory
+        columns:
+          - name: productcategoryid
+            description: Fonte das informações sobre as categorias dos produtos.
+            data_tests:
+              - unique
+              - not_null
+                                          
       - name: address
         columns:
           - name: addressid
+            description: Fonte das informações sobre os endereços.
             data_tests:
               - unique
               - not_null
@@ -21,14 +39,15 @@ sources:
       - name: stateprovince
         columns:
           - name: stateprovinceid
+            description: Fonte das informações sobre os endereços de estados.
             data_tests:
               - unique
               - not_null        
 
-
       - name: countryregion
         columns:
           - name: countryregioncode
+            description: Fonte das informações sobre as regiões
             data_tests:
               - unique
               - not_null        

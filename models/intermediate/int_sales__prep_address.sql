@@ -16,16 +16,20 @@ with
 
     , full_address as (
         select
-            address.pk_address
+            {{ 
+                dbt_utils.generate_surrogate_key(['id_address', 'modifieddate'])
+            }} as sk_address
+            , address.id_address
             , address.city
             , address.postalcode
             , address.spatialLocation
+            , address.modifieddate
             , stateprovince.stateprovince_name
-            , countryregion.pk_countryregion
+            , stateprovince.stateprovince_contryregioncode
             , countryregion.countryregion_name
         from address
-        left join stateprovince on address.pk_address = stateprovince.pk_stateprovince
-        left join countryregion on stateprovince.pk_stateprovince = countryregion.pk_countryregion
+        left join stateprovince on address.id_address = stateprovince.pk_stateprovince
+        left join countryregion on stateprovince.stateprovince_contryregioncode = countryregion.pk_countryregion
     )
 
 select *

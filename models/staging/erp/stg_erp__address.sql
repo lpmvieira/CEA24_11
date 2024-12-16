@@ -6,10 +6,11 @@ with
 
     , renomed as (
         select 
-            cast(addressid as int) as pk_address
+            cast(addressid as int) as id_address
             , cast(city as varchar) as city  
-            , postalcode
-            , spatialLocation
+            , cast(postalcode as varchar) as postalcode
+            , cast(spatialLocation as varchar) as spatialLocation
+            , cast (modifieddate as timestamp) as modifieddate
         from source_address
     )
 
