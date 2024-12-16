@@ -1,0 +1,32 @@
+models:
+  - name: int_sales__prep_products
+    description: Modelo que enriquece os dados de produtos com subcategoria e categoria.
+    columns:
+      - name: sk_product
+        description: Chave surrogate do produto.
+        data_tests:
+          - not_null
+
+      - name: id_product
+        description: Chave natural do produto..
+      
+      - name: name_product
+        description: Nome do produto.
+
+      - name: listprice
+        description: Tabela de preço do produto.
+
+      - name: sellstartdate
+        description: Data de início de venda do produto.
+        
+      - name: sellenddate
+        description: Data final de venda do produto.
+
+      - name: modifieddate
+        description: Data em que os dados do produto foram modificados.
+
+      - name: name_subcategory
+        description: Nome da subcategoria do produto.
+
+      - name: name_category
+        description: Nome da categoria do produto.

@@ -1,0 +1,32 @@
+models:
+  - name: int_sales__prep_address
+    description: Modelo que enrique os dados de endereços com os estados e regiões.
+    columns:
+      - name: sk_address
+        description: Chave surrogate do endereço.
+        tests: 
+          - not_null
+
+      - name: id_address
+        description: Chave natural do endereço.
+          
+      - name: city
+        description: Nome da cidade.
+
+      - name: postalcode
+        description: Código postal do endereço.
+
+      - name: spatialLocation
+        description: Localização espacial do endereço.
+
+      - name: modifieddate
+        description: Data em que os dados do endereço foram modificados.
+
+      - name: stateprovince_name
+        description: Nome do estado/província.
+
+      - name: contryregioncode
+        description: Código de região do país. 
+
+      - name: countryregion_name
+        description: Nome da região do país.
