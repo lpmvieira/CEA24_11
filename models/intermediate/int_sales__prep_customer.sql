@@ -24,7 +24,7 @@ with
         from {{ ref('stg_erp__creditcard') }}
     )
 
-    , complete_customer as (
+    , joined_customer as (
         select
             {{ 
                 dbt_utils.generate_surrogate_key(['id_customer', 'modifieddate'])
@@ -44,4 +44,4 @@ with
     )
 
 select *
-from complete_customer
+from joined_customer

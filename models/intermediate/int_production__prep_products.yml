@@ -1,5 +1,5 @@
 models:
-  - name: int_sales__prep_products
+  - name: int_production__prep_products
     description: Modelo que enriquece os dados de produtos com subcategoria e categoria.
     columns:
       - name: sk_product

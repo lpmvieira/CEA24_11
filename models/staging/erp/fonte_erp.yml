@@ -13,82 +13,96 @@ sources:
               - not_null
 
       - name: productsubcategory
+        description: Fonte das informações sobre as subcategorias dos produtos.
         columns:
           - name: productsubcategoryid
-            description: Fonte das informações sobre as subcategorias dos produtos.
             data_tests:
               - unique
               - not_null
 
       - name: productcategory
+        description: Fonte das informações sobre as categorias dos produtos.
         columns:
           - name: productcategoryid
-            description: Fonte das informações sobre as categorias dos produtos.
             data_tests:
               - unique
               - not_null
                                           
       - name: address
+        description: Fonte das informações sobre os endereços.
         columns:
           - name: addressid
-            description: Fonte das informações sobre os endereços.
             data_tests:
               - unique
               - not_null
 
       - name: stateprovince
+        description: Fonte das informações sobre os endereços de estados.
         columns:
           - name: stateprovinceid
-            description: Fonte das informações sobre os endereços de estados.
             data_tests:
               - unique
               - not_null        
 
       - name: countryregion
+        description: Fonte das informações sobre as regiões.
         columns:
           - name: countryregioncode
-            description: Fonte das informações sobre as regiões.
             data_tests:
               - unique
               - not_null        
 
       - name: customer
+        description: Fonte das informações do cliente.
         columns:
           - name: customerid
-            description: Fonte das informações do cliente.
             data_tests:
               - unique
               - not_null      
 
       - name: store
+        description: Fonte das informações da loja do cliente.
         columns:
           - name: businessentityid
-            description: Fonte das informações da loja do cliente.
             data_tests:
               - unique
               - not_null                
 
-
       - name: person
+        description: Fonte das informações sobre as pessoas.
         columns:
           - name: businessentityid
-            description: Fonte das informações sobre as pessoas.
             data_tests:
               - unique
               - not_null        
 
       - name: personcreditcard
+        description: Fonte das informações sobre as operações de cartão da pessoa.
         columns:
           - name: businessentityid
-            description: Fonte das informações sobre as operações de cartão da pessoa.
             data_tests:
               - unique
               - not_null     
 
       - name: creditcard
+        description: Fonte das informações sobre o cartão de crédito da pessoa.
         columns:
           - name: creditcardid
-            description: Fonte das informações sobre o cartão de crédito da pessoa.
+            data_tests:
+              - unique
+              - not_null              
+
+      - name: salesorderheadersalesreason
+        description: Razões dos pedidos de venda.
+        columns:
+          - name: salesorderid
+            data_tests:
+              - not_null
+
+      - name: salesreason
+        description: Razões para a realização das vendas.
+        columns:
+          - name: salesreasonid
             data_tests:
               - unique
               - not_null                                   
