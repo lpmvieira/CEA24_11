@@ -14,7 +14,7 @@ with
         from {{ ref('stg_erp__productcategory') }}
     )
 
-    , full_product as (
+    , joined_product as (
         select
             {{ 
                 dbt_utils.generate_surrogate_key(['id_product', 'modifieddate'])
@@ -33,4 +33,4 @@ with
     )
 
 select *
-from full_product
+from joined_product

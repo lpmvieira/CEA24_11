@@ -1,5 +1,5 @@
 models:
-  - name: int_sales__prep_address
+  - name: int_person__prep_address
     description: Modelo que enrique os dados de endereços com os estados e regiões.
     columns:
       - name: sk_address

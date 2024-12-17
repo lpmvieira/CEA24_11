@@ -14,7 +14,7 @@ with
         from {{ ref('stg_erp__countryregion') }}
     )
 
-    , full_address as (
+    , joined_address as (
         select
             {{ 
                 dbt_utils.generate_surrogate_key(['id_address', 'modifieddate'])
@@ -33,4 +33,4 @@ with
     )
 
 select *
-from full_address
+from joined_address

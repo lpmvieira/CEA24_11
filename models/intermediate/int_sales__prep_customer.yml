@@ -1,6 +1,6 @@
 models:
   - name: int_sales__prep_customer
-    description: Modelo que enrique os dados de endereços com os estados e regiões.
+    description: Modelo que enriquece os dados do cliente.
     columns:
       - name: sk_customer
         description: Chave surrogate do endereço.
