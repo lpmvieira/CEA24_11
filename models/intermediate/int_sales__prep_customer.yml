@@ -1,0 +1,26 @@
+models:
+  - name: int_sales__prep_customer
+    description: Modelo que enrique os dados de endereços com os estados e regiões.
+    columns:
+      - name: sk_customer
+        description: Chave surrogate do endereço.
+        tests: 
+          - not_null
+
+      - name: id_customer
+        description: Chave natural do endereço.
+
+      - name: modifieddate
+        description: Data em que os dados do endereço foram modificados.   
+
+      - name: firstname_person
+        description: Primeiro nome da pessoa.
+
+      - name: lastname_person
+        description: Último nome da pessoa.
+
+      - name: fullname_person
+        description: Nome completo da pessoa.
+
+      - name: card_type
+        description: Tipo do cartão utilizado.
