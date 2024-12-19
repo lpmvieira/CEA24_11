@@ -106,3 +106,19 @@ sources:
             data_tests:
               - unique
               - not_null                                   
+
+      - name: salesorderdetail
+        description: Fonde das informações sobre os detalhes do pedido.
+        columns:
+          - name: salesorderdetailid
+            data_tests:
+              - unique
+              - not_null                                   
+
+      - name: salesorderheader
+        description: Fonte das informações dos pedidos.
+        columns:
+          - name: salesorderid
+            data_tests:
+              - unique
+              - not_null                                   
