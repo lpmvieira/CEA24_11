@@ -1,19 +1,19 @@
 models:
-  - name: int_sales__prep_salesreason
+  - name: int_sales__prep_reason
     description: Modelo que enrique os dados de razão de vendas do cliente.
     columns:
-      - name: sk_salesreason
+      - name: sk_reason
         description: Chave surrogate da razão de venda.
         tests: 
           - not_null
 
-      - name: id_salesorderreason
+      - name: id_orderreason
         description: Chave natural da razão de venda.
           
-      - name: pk_salesreason
+      - name: pk_reason
         description: Chave primária da razão de venda.
 
-      - name: name_salesreason
+      - name: name_reason
         description: Nome da razão de venda.
 
       - name: name_reasontype
