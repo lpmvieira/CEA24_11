@@ -7,12 +7,6 @@ models:
         tests: 
           - not_null
 
-      - name: id_customer
-        description: Chave natural do endereço.
-
-      - name: modifieddate
-        description: Data em que os dados do endereço foram modificados.   
-
       - name: firstname_person
         description: Primeiro nome da pessoa.
 

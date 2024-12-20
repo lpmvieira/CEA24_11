@@ -17,13 +17,9 @@ with
     , joined_address as (
         select
             {{ 
-                dbt_utils.generate_surrogate_key(['id_address', 'modifieddate'])
+                dbt_utils.generate_surrogate_key(['id_address'])
             }} as sk_address
-            , address.id_address
             , address.city
-            , address.postalcode
-            , address.spatialLocation
-            , address.modifieddate
             , stateprovince.stateprovince_name
             , stateprovince.stateprovince_contryregioncode
             , countryregion.countryregion_name

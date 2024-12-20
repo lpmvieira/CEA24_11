@@ -7,20 +7,11 @@ models:
         tests: 
           - not_null
 
-      - name: id_address
-        description: Chave natural do endereço.
-          
       - name: city
         description: Nome da cidade.
 
       - name: postalcode
         description: Código postal do endereço.
-
-      - name: spatialLocation
-        description: Localização espacial do endereço.
-
-      - name: modifieddate
-        description: Data em que os dados do endereço foram modificados.
 
       - name: stateprovince_name
         description: Nome do estado/província.

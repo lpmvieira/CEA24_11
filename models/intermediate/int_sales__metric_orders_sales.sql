@@ -35,8 +35,6 @@ with
             {{ 
                 dbt_utils.generate_surrogate_key(['pk_orderdetail', 'pk_orders'])
             }} as sk_order_sales
-            , pk_orderdetail as id_oderdetail
-            , pk_orders as id_orders
             , fk_product
             , fk_person
             , fk_customer
