@@ -7,9 +7,6 @@ models:
         data_tests:
           - not_null
 
-      - name: id_product
-        description: Chave natural do produto..
-      
       - name: name_product
         description: Nome do produto.
 
@@ -21,9 +18,6 @@ models:
         
       - name: sellenddate
         description: Data final de venda do produto.
-
-      - name: modifieddate
-        description: Data em que os dados do produto foram modificados.
 
       - name: name_subcategory
         description: Nome da subcategoria do produto.

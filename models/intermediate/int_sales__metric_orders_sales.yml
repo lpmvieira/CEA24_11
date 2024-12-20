@@ -1,0 +1,56 @@
+models:
+  - name: int_sales__metric_orders_sales
+    description: Modelo que enriquece os dados de vendas com ordens e detalhe das ordens.
+    columns:
+      - name: sk_order_sales
+        description: Chave surrogate de orders.
+        data_tests:
+          - not_null
+
+      - name: fk_product
+        description: Chave estrangeira de product.
+
+      - name: fk_person
+        description: Chave estrangeira de person.
+
+      - name: fk_customer
+        description: Chave estrangeira de customer.
+
+      - name: fk_address
+        description: Chave estrangeira de address.
+
+      - name: orderdate
+        description: Data do pedido.
+
+      - name: subtotal
+        description: Valor total do pedido sem incluir impostos e outros encargos.
+
+      - name: taxamt
+        description: Valor de imposto aplicado sobre a venda.
+        
+      - name: totaldue
+        description: Valor total da venda incluindo impostos e encargos.
+
+      - name: discount
+        description: Desconto da venda.
+
+      - name: unitprice
+        description: Valor unitario da venda.
+
+      - name: orderqty
+        description: Quantidade de ordens.
+
+      - name: freight
+        description: Valor do frete.
+
+      - name: total_bruto
+        description: Valor total bruto da venda.
+
+      - name: total_liquido
+        description: Valor total liquido da venda.
+
+      - name: frete_rateado
+        description: Valor de frete rateado da venda.
+
+      - name: teve_desconto
+        description: Resultado se a venda teve ou não desconto.
