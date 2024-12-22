@@ -2,8 +2,8 @@ models:
   - name: int_person__prep_address
     description: This model enriches address data with states and regions.
     columns:
-      - name: sk_address
-        description: Surrogate key of the address, uniquely identifying each address in the database.
+      - name: id_address
+        description: Primary key of the address, uniquely identifying each address in the database.
         tests: 
           - not_null
           - unique

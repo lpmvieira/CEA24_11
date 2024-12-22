@@ -16,9 +16,7 @@ with
 
     , joined_address as (
         select
-            {{ 
-                dbt_utils.generate_surrogate_key(['id_address'])
-            }} as sk_address
+            address.id_address
             , address.city
             , stateprovince.stateprovince_name
             , stateprovince.stateprovince_contryregioncode

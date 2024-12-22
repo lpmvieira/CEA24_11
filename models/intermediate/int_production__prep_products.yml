@@ -2,8 +2,8 @@ models:
   - name: int_production__prep_products
     description: This model enriches product data with subcategory and category information.
     columns:
-      - name: sk_product
-        description: Surrogate key of the product, uniquely identifying each product in the database.
+      - name: id_product
+        description: Primary key of the product, uniquely identifying each product in the database.
         tests:
           - not_null
           - unique

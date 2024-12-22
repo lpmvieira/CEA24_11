@@ -2,15 +2,12 @@ models:
   - name: int_sales__prep_reason
     description: This model enriches customer sales reason data.
     columns:
-      - name: sk_reason
-        description: Surrogate key for the sales reason, uniquely identifying each sales reason in the database.
+      - name: id_orderreason
+        description: Primary key for the sales reason, representing the unique identifier for each sales reason.
         tests: 
           - not_null
           - unique
-            
-      - name: id_orderreason
-        description: Natural key for the sales reason, representing the unique identifier for each sales reason.
-          
+  
       - name: pk_reason
         description: Primary key for the sales reason.
 
