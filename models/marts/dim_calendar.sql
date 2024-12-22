@@ -1,7 +1,6 @@
 with
     dim_calendar as (
-        select *
-        from {{ ref('stg_erp__calendar') }}
+        {{ dbt_date.get_date_dimension("2011-01-01", "2015-01-01")}}
     )
 
 select *

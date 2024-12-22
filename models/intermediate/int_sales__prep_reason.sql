@@ -20,6 +20,7 @@ with
             , reason.name_reasontype
         from orderheadersalesreason
         left join reason on orderheadersalesreason.fk_reason = reason.pk_reason
+        where name_reasontype = 'Promotion'
     )
 
 select *

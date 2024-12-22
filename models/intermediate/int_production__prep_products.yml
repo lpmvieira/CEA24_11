@@ -1,26 +1,27 @@
 models:
   - name: int_production__prep_products
-    description: Modelo que enriquece os dados de produtos com subcategoria e categoria.
+    description: This model enriches product data with subcategory and category information.
     columns:
       - name: sk_product
-        description: Chave surrogate do produto.
-        data_tests:
+        description: Surrogate key of the product, uniquely identifying each product in the database.
+        tests:
           - not_null
+          - unique
 
       - name: name_product
-        description: Nome do produto.
+        description: Name of the product.
 
       - name: listprice
-        description: Tabela de preço do produto.
+        description: Price table of the product, representing the list price at which the product is sold.
 
       - name: sellstartdate
-        description: Data de início de venda do produto.
-        
+        description: The start date when the product was first available for sale.
+
       - name: sellenddate
-        description: Data final de venda do produto.
+        description: The end date when the product was no longer available for sale.
 
       - name: name_subcategory
-        description: Nome da subcategoria do produto.
+        description: Name of the product's subcategory, providing more specific classification within the main category.
 
       - name: name_category
-        description: Nome da categoria do produto.
+        description: Name of the product's main category, used for broader classification of the product.

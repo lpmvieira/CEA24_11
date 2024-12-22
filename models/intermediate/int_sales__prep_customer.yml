@@ -1,20 +1,21 @@
 models:
   - name: int_sales__prep_customer
-    description: Modelo que enriquece os dados do cliente.
+    description: This model prepares customer data for analysis, including personal details and card type information.
     columns:
       - name: sk_customer
-        description: Chave surrogate do endereço.
+        description: Surrogate key of the customer, uniquely identifying each customer in the database.
         tests: 
           - not_null
+          - unique
 
       - name: firstname_person
-        description: Primeiro nome da pessoa.
+        description: First name of the person.
 
       - name: lastname_person
-        description: Último nome da pessoa.
+        description: Last name of the person.
 
       - name: fullname_person
-        description: Nome completo da pessoa.
+        description: Full name of the person, a combination of first name and last name.
 
       - name: card_type
-        description: Tipo do cartão utilizado.
+        description: Type of card associated with the customer, indicating their preferred payment method.

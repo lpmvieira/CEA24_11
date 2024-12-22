@@ -12,9 +12,8 @@ with
     , joined as (
         select
             order_detail.pk_orderdetail
-            , order_detail.fk_product
             , orders.pk_orders
-            , orders.fk_person
+            , order_detail.fk_product
             , orders.fk_customer
             , orders.fk_address
             , orders.orderdate
@@ -35,8 +34,8 @@ with
             {{ 
                 dbt_utils.generate_surrogate_key(['pk_orderdetail', 'pk_orders'])
             }} as sk_order_sales
+            , pk_orders
             , fk_product
-            , fk_person
             , fk_customer
             , fk_address
             , orderdate
@@ -47,15 +46,15 @@ with
             , unitprice
             , orderqty
             , freight
-            , unitprice * orderqty as total_bruto
-            , unitprice * (1 - discount) * orderqty as total_liquido
-            , cast((freight /  count(*) over(partition by orders_number)) as numeric(18,2)) as frete_rateado
+            , unitprice * orderqty as gross_value
+            , unitprice * (1 - discount) * orderqty as net_value
+            , cast((freight /  count(*) over(partition by orders_number)) as numeric(18,2)) as apportioned_freight
             , case
                 when discount > 0 then true
                 else false
-            end as teve_desconto
+            end as have_discount
         from joined
     )
 
-select * 
-from metrics  
+select *
+from metrics

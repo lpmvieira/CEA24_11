@@ -1,124 +1,139 @@
 sources:
   - name: erp
-    description: Sistema de vendas da empresa Adventure Works.
+    description: ERP system data source for the Adventure Works database.
     schema: raw_adventure_works
     database: fea24_11
     tables:
       - name: product
-        description: Fonte das informações sobre os produtos.
+        description: Table containing detailed information about products.
         columns:
           - name: productid
-            data_tests:
+            description: Unique identifier for each product.
+            tests:
               - unique
               - not_null
 
       - name: productsubcategory
-        description: Fonte das informações sobre as subcategorias dos produtos.
+        description: Table containing information about product subcategories.
         columns:
           - name: productsubcategoryid
-            data_tests:
+            description: Unique identifier for each product subcategory.
+            tests:
               - unique
               - not_null
 
       - name: productcategory
-        description: Fonte das informações sobre as categorias dos produtos.
+        description: Table containing information about product categories.
         columns:
           - name: productcategoryid
-            data_tests:
+            description: Unique identifier for each product category.
+            tests:
               - unique
               - not_null
                                           
       - name: address
-        description: Fonte das informações sobre os endereços.
+        description: Table containing address information.
         columns:
           - name: addressid
-            data_tests:
+            description: Unique identifier for each address.
+            tests:
               - unique
               - not_null
 
       - name: stateprovince
-        description: Fonte das informações sobre os endereços de estados.
+        description: Table containing information about states and provinces.
         columns:
           - name: stateprovinceid
-            data_tests:
+            description: Unique identifier for each state or province.
+            tests:
               - unique
               - not_null        
 
       - name: countryregion
-        description: Fonte das informações sobre as regiões.
+        description: Table containing information about countries and regions.
         columns:
           - name: countryregioncode
-            data_tests:
+            description: Unique code representing the country or region.
+            tests:
               - unique
               - not_null        
 
       - name: customer
-        description: Fonte das informações do cliente.
+        description: Table containing customer information.
         columns:
           - name: customerid
-            data_tests:
+            description: Unique identifier for each customer.
+            tests:
               - unique
               - not_null      
 
       - name: store
-        description: Fonte das informações da loja do cliente.
+        description: Table containing information about stores.
         columns:
           - name: businessentityid
-            data_tests:
+            description: Unique identifier for each business entity (store).
+            tests:
               - unique
               - not_null                
 
       - name: person
-        description: Fonte das informações sobre as pessoas.
+        description: Table containing information about individuals.
         columns:
           - name: businessentityid
-            data_tests:
+            description: Unique identifier for each business entity (person).
+            tests:
               - unique
               - not_null        
 
       - name: personcreditcard
-        description: Fonte das informações sobre as operações de cartão da pessoa.
+        description: Table containing information about person and their associated credit cards.
         columns:
           - name: businessentityid
-            data_tests:
+            description: Unique identifier for each business entity (person).
+            tests:
               - unique
               - not_null     
 
       - name: creditcard
-        description: Fonte das informações sobre o cartão de crédito da pessoa.
+        description: Table containing information about credit cards.
         columns:
           - name: creditcardid
-            data_tests:
+            description: Unique identifier for each credit card.
+            tests:
               - unique
               - not_null              
 
       - name: salesorderheadersalesreason
-        description: Razões dos pedidos de venda.
+        description: Table linking sales orders to their respective sales reasons.
         columns:
           - name: salesorderid
-            data_tests:
+            description: Unique identifier for each sales order.
+            tests:
               - not_null
 
       - name: salesreason
-        description: Razões para a realização das vendas.
+        description: Table containing information about sales reasons.
         columns:
           - name: salesreasonid
-            data_tests:
+            description: Unique identifier for each sales reason.
+            tests:
               - unique
               - not_null                                   
 
       - name: salesorderdetail
-        description: Fonde das informações sobre os detalhes do pedido.
+        description: Table containing detailed information about sales orders.
         columns:
           - name: salesorderdetailid
-            data_tests:
+            description: Unique identifier for each sales order detail.
+            tests:
               - unique
               - not_null                                   
 
       - name: salesorderheader
-        description: Fonte das informações dos pedidos.
+        description: Table containing header information for sales orders.
         columns:
           - name: salesorderid
-            data_tests:
+            description: Unique identifier for each sales order.
+            tests:
               - unique
-              - not_null                                   
+              - not_null

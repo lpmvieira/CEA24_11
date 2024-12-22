@@ -1,20 +1,21 @@
 models:
   - name: int_sales__prep_reason
-    description: Modelo que enrique os dados de razão de vendas do cliente.
+    description: This model enriches customer sales reason data.
     columns:
       - name: sk_reason
-        description: Chave surrogate da razão de venda.
+        description: Surrogate key for the sales reason, uniquely identifying each sales reason in the database.
         tests: 
           - not_null
-
+          - unique
+            
       - name: id_orderreason
-        description: Chave natural da razão de venda.
+        description: Natural key for the sales reason, representing the unique identifier for each sales reason.
           
       - name: pk_reason
-        description: Chave primária da razão de venda.
+        description: Primary key for the sales reason.
 
       - name: name_reason
-        description: Nome da razão de venda.
+        description: Name of the sales reason, providing the rationale behind the sale.
 
       - name: name_reasontype
-        description: Nome do tipo de razão da venda.
+        description: Type name of the sales reason, categorizing the reason for the sale.
