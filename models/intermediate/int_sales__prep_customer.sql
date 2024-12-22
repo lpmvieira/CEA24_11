@@ -26,9 +26,7 @@ with
 
     , joined_customer as (
         select
-            {{ 
-                dbt_utils.generate_surrogate_key(['id_customer'])
-            }} as sk_customer
+            customer.id_customer
             , store.name_store
             , person.firstname_person
             , person.lastname_person

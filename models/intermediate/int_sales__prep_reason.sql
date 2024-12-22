@@ -11,10 +11,7 @@ with
 
     , joined_reason as (
         select
-            {{ 
-                dbt_utils.generate_surrogate_key(['id_orderreason', 'pk_reason'])
-            }} as sk_reason
-            , orderheadersalesreason.id_orderreason
+            orderheadersalesreason.id_orderreason
             , reason.pk_reason
             , reason.name_reason
             , reason.name_reasontype

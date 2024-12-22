@@ -2,8 +2,8 @@ models:
   - name: int_sales__prep_customer
     description: This model prepares customer data for analysis, including personal details and card type information.
     columns:
-      - name: sk_customer
-        description: Surrogate key of the customer, uniquely identifying each customer in the database.
+      - name: id_customer
+        description: Primary key of the customer, uniquely identifying each customer in the database.
         tests: 
           - not_null
           - unique

@@ -16,9 +16,7 @@ with
 
     , joined_product as (
         select
-            {{ 
-                dbt_utils.generate_surrogate_key(['id_product'])
-            }} as sk_product
+            product.id_product
             , product.name_product
             , product.listprice
             , product.sellstartdate
