@@ -1,56 +1,58 @@
 models:
   - name: int_sales__metric_orders_sales
-    description: Modelo que enriquece os dados de vendas com ordens e detalhe das ordens.
+    description: This model provides metrics for sales orders, enriching data with various dimensions and measures.
+
     columns:
       - name: sk_order_sales
-        description: Chave surrogate de orders.
-        data_tests:
+        description: Surrogate key for the sales order, uniquely identifying each sales order in the database.
+        tests: 
           - not_null
+          - unique
+
+      - name: pk_orders
+        description: Primary key of the orders table, identifying each individual order.
 
       - name: fk_product
-        description: Chave estrangeira de product.
-
-      - name: fk_person
-        description: Chave estrangeira de person.
+        description: Foreign key linking to the product table, identifying the product involved in the order.
 
       - name: fk_customer
-        description: Chave estrangeira de customer.
+        description: Foreign key linking to the customer table, identifying the customer who placed the order.
 
       - name: fk_address
-        description: Chave estrangeira de address.
+        description: Foreign key linking to the address table, identifying the address associated with the order.
 
       - name: orderdate
-        description: Data do pedido.
+        description: The date when the order was placed.
 
       - name: subtotal
-        description: Valor total do pedido sem incluir impostos e outros encargos.
+        description: The subtotal amount for the order, excluding taxes and additional charges.
 
       - name: taxamt
-        description: Valor de imposto aplicado sobre a venda.
-        
+        description: The total amount of tax applied to the order.
+
       - name: totaldue
-        description: Valor total da venda incluindo impostos e encargos.
+        description: The total amount due for the order, including the subtotal and taxes.
 
       - name: discount
-        description: Desconto da venda.
+        description: The discount amount applied to the order.
 
       - name: unitprice
-        description: Valor unitario da venda.
+        description: The unit price of the product in the order.
 
       - name: orderqty
-        description: Quantidade de ordens.
+        description: The quantity of the product ordered.
 
       - name: freight
-        description: Valor do frete.
+        description: The freight cost associated with the order.
 
-      - name: total_bruto
-        description: Valor total bruto da venda.
+      - name: gross_value
+        description: The gross value amount for the order before any deductions.
 
-      - name: total_liquido
-        description: Valor total liquido da venda.
+      - name: net_value
+        description: The net value amount for the order after all deductions.
 
-      - name: frete_rateado
-        description: Valor de frete rateado da venda.
+      - name: apportioned_freight 
+        description: The apportioned freight cost for the order.
 
-      - name: teve_desconto
-        description: Resultado se a venda teve ou não desconto.
+      - name: have_discount
+        description: Indicates whether a discount was applied to the order.

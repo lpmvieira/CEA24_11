@@ -1,23 +1,24 @@
 models:
   - name: int_person__prep_address
-    description: Modelo que enrique os dados de endereços com os estados e regiões.
+    description: This model enriches address data with states and regions.
     columns:
       - name: sk_address
-        description: Chave surrogate do endereço.
+        description: Surrogate key of the address, uniquely identifying each address in the database.
         tests: 
           - not_null
+          - unique
 
       - name: city
-        description: Nome da cidade.
+        description: Name of the city where the address is located.
 
       - name: postalcode
-        description: Código postal do endereço.
+        description: Postal code for the address, used for mail delivery.
 
       - name: stateprovince_name
-        description: Nome do estado/província.
+        description: Name of the state or province in which the address is situated.
 
-      - name: contryregioncode
-        description: Código de região do país. 
+      - name: countryregioncode
+        description: Code representing the country or region of the address.
 
       - name: countryregion_name
-        description: Nome da região do país.
+        description: Name of the country or region where the address is located.
