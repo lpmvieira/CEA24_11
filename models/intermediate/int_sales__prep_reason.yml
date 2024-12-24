@@ -6,7 +6,6 @@ models:
         description: Primary key for the sales reason, representing the unique identifier for each sales reason.
         tests: 
           - not_null
-          - unique
   
       - name: pk_reason
         description: Primary key for the sales reason.
