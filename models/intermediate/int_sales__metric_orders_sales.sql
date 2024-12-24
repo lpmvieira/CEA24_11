@@ -17,6 +17,7 @@ with
             , orders.fk_customer
             , orders.fk_address
             , orders.orderdate
+            , orders.orders_status
             , order_detail.discount
             , order_detail.unitprice
             , order_detail.orderqty
@@ -39,6 +40,7 @@ with
             , fk_customer
             , fk_address
             , orderdate
+            , orders_status
             , subtotal
             , taxamt
             , totaldue 
@@ -58,3 +60,4 @@ with
 
 select *
 from metrics
+where orders_status <> 5
