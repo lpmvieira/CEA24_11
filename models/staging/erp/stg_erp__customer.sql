@@ -9,7 +9,6 @@ with
             cast(customerid as int) as id_customer
             , cast(personid as int) as fk_person  
             , cast(storeid as int) as fk_store
-            , cast (modifieddate as timestamp) as modifieddate
         from source_customer
     )
 
