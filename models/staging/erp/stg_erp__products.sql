@@ -11,7 +11,6 @@ with
             , cast(listprice as numeric(18,2)) as listprice
             , cast(sellstartdate as date) as  sellstartdate
             , cast(sellenddate as date) as  sellenddate
-            , cast(modifieddate as timestamp) as  modifieddate
         from source_products
     )
 

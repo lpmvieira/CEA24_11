@@ -60,4 +60,3 @@ with
 
 select *
 from metrics
-where orders_status <> 5
