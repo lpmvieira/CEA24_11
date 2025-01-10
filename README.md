@@ -2,9 +2,8 @@
 
 ## Links de acesso:
 
-- Diagrama conceitual resumido: [Diagrama](XXXXXXXXXXXXXXXXXXXXXXXXXXXX)
-- Vídeo do Desafio: [YouTube](XXXXXXXXXXXXXXXXXXXXXXXXXXXX)
-- Dashboard do Power BI: Dashboard [Power BI](XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX)
+- Vídeo do Desafio: [YouTube](https://youtu.be/gzqlrFzQoVI)
+- Dashboard do Power BI: [Dashboard Power BI](https://app.powerbi.com/groups/me/reports/3bfd3726-d21f-4f85-b091-b6afc0fd8e97?ctid=4394d834-b267-4083-a9e2-5cf19b0267f4&pbi_source=linkShare)
 
 ## Ferramentas utilizadas:
 
